@@ -1,17 +1,76 @@
-# React + Vite
+# 🧠 Noob DSA
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple and interactive **DSA Tracker** built with **React + Vite**.
 
-Currently, two official plugins are available:
+The goal of this project is to make DSA practice easier by keeping questions, solved status, links, notes, approaches, and progress together in one place.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📚 Track DSA questions
+- ✅ Mark questions as solved / unsolved
+- 📊 View your solving progress
+- 🎲 Pick a random question
+- 🔎 Search questions
+- 🔗 Store useful problem links
+- 📝 Add notes and different approaches
+- ⏱️ Track your solving time
+- 🎨 Simple and clean UI
+- 💾 Question data stored in `data.json`
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-# noob_dsa
+## 🖥️ Preview
+
+The tracker contains:
+
+- Progress overview
+- Timer
+- Question list
+- Search
+- Random question selection
+- Problem links
+- Notes
+- Multiple approaches
+- Color-based solved/unsolved status
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- JavaScript
+- CSS
+- JSON
+
+---
+
+## 📁 Project Structure
+
+```text
+noob_dsa/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── ProgressCard.jsx
+│   │   ├── Timer.jsx
+│   │   ├── QuestionToolbar.jsx
+│   │   ├── QuestionTable.jsx
+│   │   ├── QuestionRow.jsx
+│   │   ├── NotePanel.jsx
+│   │   └── ColorPalette.jsx
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── data.json
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
