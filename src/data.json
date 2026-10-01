@@ -1,19 +1,16 @@
-[{
-        "id": 0,
-        "title": "Spiral traversal on a Matrix",
-        "link": "https://example.com/spiral-matrix",
-        "isSolved": false,
-        "notes": []
-    },
-    {
+[
+  {
+    "id": 1,
+    "title": "Search an element in a matrix",
+    "link": "https://example.com/search-matrix",
+    "isSolved": false,
+    "notes": [
+      {
         "id": 1,
-        "title": "Search an element in a matrix",
-        "link": "https://example.com/search-matrix",
-        "isSolved": false,
-        "notes": [{
-            "id": 1,
-            "description": "using : tree with it",
-            "isOpen": true
-        }]
-    }
+        "title": "using binary searchkjhbdkfvd",
+        "description": "// Your code here...import React, { useState } from 'react';\n\nconst NoteModal = ({ question, onClose, onSaveNotes }) => {\n  const [approaches, setApproaches] = useState(\n    question.notes && question.notes.length > 0\n      ? question.notes\n      : [{ id: 1, title: 'using binary search', description: '', isOpen: true }]\n  );\n\n  const handleAddApproach = () => {\n    const nextId = approaches.length > 0 ? Math.max(...approaches.map(a => a.id)) + 1 : 1;\n    setApproaches([\n      ...approaches,\n      { id: nextId, title: '', description: '', isOpen: true }\n    ]);\n  };\n\n  const handleTitleChange = (id, newTitle) => {\n    setApproaches(approaches.map(a => a.id === id ? { ...a, title: newTitle } : a));\n  };\n\n  const handleDescriptionChange = (id, text) => {\n    setApproaches(approaches.map(a => a.id === id ? { ...a, description: text } : a));\n  };\n\n  const toggleAccordion = (id) => {\n    setApproaches(approaches.map(a => a.id === id ? { ...a, isOpen: !a.isOpen } : a));\n  };\n\n  const handleSave = () => {\n    onSaveNotes(question.id, approaches);\n    onClose();\n  };\n\n  return (\n    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}>\n      <div style={{ background: '#262626', color: '#fff', padding: '25px', borderRadius: '8px', width: '600px', maxHeight: '85vh', overflowY: 'auto' }}>\n        <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Note for: {question.title}</h3>\n\n        {approaches.map((app) => (\n          <div key={app.id} style={{ background: '#1c3829', border: '1px solid #2e5940', borderRadius: '6px', padding: '12px', marginBottom: '12px' }}>\n            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '10px' }}>\n              \n              {/* Approach Title Input (replaces static id=1 badge) */}\n              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexGrow: 1 }}>\n                <span style={{ fontSize: '13px', color: '#88c999', fontWeight: 'bold', whiteSpace: 'nowrap' }}>\n                  approach -\n                </span>\n                <input\n                  type=\"text\"\n                  placeholder=\"e.g. using binary search\"\n                  value={app.title}\n                  onChange={(e) => handleTitleChange(app.id, e.target.value)}\n                  style={{\n                    backgroundColor: '#111',\n                    color: '#fff',\n                    border: '1px solid #333',\n                    borderRadius: '4px',\n                    padding: '4px 8px',\n                    fontSize: '13px',\n                    width: '100%',\n                    boxSizing: 'border-box'\n                  }}\n                />\n              </div>\n\n              <button \n                onClick={() => toggleAccordion(app.id)} \n                style={{ border: 'none', background: 'none', color: '#fff', cursor: 'pointer', fontSize: '14px' }}\n              >\n                {app.isOpen ? '∇' : 'Δ'}\n              </button>\n            </div>\n\n            {/* Approach Description Code Area */}\n            {app.isOpen && (\n              <div style={{ marginTop: '10px' }}>\n                <textarea\n                  rows={8}\n                  placeholder=\"Paste or write code / approach here...\"\n                  value={app.description}\n                  onChange={(e) => handleDescriptionChange(app.id, e.target.value)}\n                  style={{\n                    width: '100%',\n                    minHeight: '200px',\n                    padding: '10px',\n                    backgroundColor: '#181818',\n                    color: '#e6e6e6',\n                    border: '1px solid #333',\n                    borderRadius: '4px',\n                    fontFamily: 'Consolas, Monaco, \"Andale Mono\", \"Ubuntu Mono\", monospace',\n                    fontSize: '13px',\n                    lineHeight: '1.5',\n                    resize: 'vertical',\n                    boxSizing: 'border-box',\n                    whiteSpace: 'pre',\n                    overflowX: 'auto'\n                  }}\n                />\n              </div>\n            )}\n          </div>\n        ))}\n\n        <div style={{ textAlign: 'center', margin: '15px 0' }}>\n          <button\n            onClick={handleAddApproach}\n            style={{ background: '#1c3829', color: '#88c999', border: '1px solid #2e5940', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}\n          >\n            add approach\n          </button>\n        </div>\n\n        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '20px' }}>\n          <button onClick={onClose} style={{ padding: '8px 16px', background: '#555', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>\n            Cancel\n          </button>\n          <button onClick={handleSave} style={{ padding: '8px 16px', background: '#0066cc', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>\n            Save\n          </button>\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default NoteModal;",
+        "isOpen": true
+      }
+    ]
+  }
 ]
