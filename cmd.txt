@@ -1,0 +1,11 @@
+git init
+
+git remote remove origin 2>/dev/null || true
+git remote add origin https://github.com/mayank11005/noob_dsa.git
+
+git add .
+git commit -m "Update DSA solutions"
+
+git branch -M main
+
+git push -u origin main --force
